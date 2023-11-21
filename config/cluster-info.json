@@ -1,0 +1,1953 @@
+{
+    "kind": "NodeList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "local-node",
+                "uid": "75ca1a9c-4c8e-4e39-aa9c-902c91f21769",
+                "resourceVersion": "19141",
+                "creationTimestamp": "2023-11-21T23:12:04Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/instance-type": "k3s",
+                    "beta.kubernetes.io/os": "linux",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "local-node",
+                    "kubernetes.io/os": "linux",
+                    "node-role.kubernetes.io/control-plane": "true",
+                    "node-role.kubernetes.io/etcd": "true",
+                    "node-role.kubernetes.io/master": "true",
+                    "node.kubernetes.io/instance-type": "k3s"
+                },
+                "annotations": {
+                    "etcd.k3s.cattle.io/node-address": "172.17.0.2",
+                    "etcd.k3s.cattle.io/node-name": "local-node-d5b3fb43",
+                    "flannel.alpha.coreos.com/backend-data": "{\"VNI\":1,\"VtepMAC\":\"fa:89:37:6b:7c:08\"}",
+                    "flannel.alpha.coreos.com/backend-type": "vxlan",
+                    "flannel.alpha.coreos.com/kube-subnet-manager": "true",
+                    "flannel.alpha.coreos.com/public-ip": "172.17.0.2",
+                    "k3s.io/hostname": "local-node",
+                    "k3s.io/internal-ip": "172.17.0.2",
+                    "k3s.io/node-args": "[\"server\",\"--cluster-init\",\"--disable\",\"traefik,servicelb,metrics-server,local-storage\",\"--node-name\",\"local-node\",\"--log\",\"./k3s.log\"]",
+                    "k3s.io/node-config-hash": "FPKSMU4HMZ5GTPNRNIQDO472NLJ2KX4VIETHYVRRP6PWTM52RXLQ====",
+                    "k3s.io/node-env": "{}",
+                    "management.cattle.io/pod-limits": "{\"memory\":\"170Mi\"}",
+                    "management.cattle.io/pod-requests": "{\"cpu\":\"100m\",\"memory\":\"70Mi\",\"pods\":\"24\"}",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "finalizers": [
+                    "wrangler.cattle.io/node",
+                    "wrangler.cattle.io/managed-etcd-controller"
+                ]
+            },
+            "spec": {
+                "podCIDR": "10.42.0.0/24",
+                "podCIDRs": [
+                    "10.42.0.0/24"
+                ],
+                "providerID": "k3s://local-node"
+            },
+            "status": {
+                "capacity": {
+                    "cpu": "3",
+                    "ephemeral-storage": "102106072Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "10139168Ki",
+                    "pods": "110"
+                },
+                "allocatable": {
+                    "cpu": "3",
+                    "ephemeral-storage": "99328786764",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "10139168Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "type": "MemoryPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2023-11-21T23:48:06Z",
+                        "lastTransitionTime": "2023-11-21T23:12:04Z",
+                        "reason": "KubeletHasSufficientMemory",
+                        "message": "kubelet has sufficient memory available"
+                    },
+                    {
+                        "type": "DiskPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2023-11-21T23:48:06Z",
+                        "lastTransitionTime": "2023-11-21T23:12:04Z",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "message": "kubelet has no disk pressure"
+                    },
+                    {
+                        "type": "PIDPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2023-11-21T23:48:06Z",
+                        "lastTransitionTime": "2023-11-21T23:12:04Z",
+                        "reason": "KubeletHasSufficientPID",
+                        "message": "kubelet has sufficient PID available"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastHeartbeatTime": "2023-11-21T23:48:06Z",
+                        "lastTransitionTime": "2023-11-21T23:12:05Z",
+                        "reason": "KubeletReady",
+                        "message": "kubelet is posting ready status"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "type": "InternalIP",
+                        "address": "172.17.0.2"
+                    },
+                    {
+                        "type": "Hostname",
+                        "address": "local-node"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "nodeInfo": {
+                    "machineID": "",
+                    "systemUUID": "b4584d56-0cc5-32f4-6f0c-47e99297a84c",
+                    "bootID": "153ff2c5-4806-4dad-ae87-99930882f789",
+                    "kernelVersion": "6.2.0-36-generic",
+                    "osImage": "SUSE Linux Enterprise Server 15 SP5",
+                    "containerRuntimeVersion": "containerd://1.6.19-k3s1",
+                    "kubeletVersion": "v1.26.4+k3s1",
+                    "kubeProxyVersion": "v1.26.4+k3s1",
+                    "operatingSystem": "linux",
+                    "architecture": "amd64"
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.io/rancher/shell@sha256:2b507a1718c9b7c10245325247d065f6f69240250748cb52cbeee9c764826e6b",
+                            "docker.io/rancher/shell:v0.1.21"
+                        ],
+                        "sizeBytes": 136120408
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/fleet-agent@sha256:bf69e015b7f3df065df11ab985e476792f092c58aae03985aabbc2a92cdb81dc",
+                            "docker.io/rancher/fleet-agent:v0.8.0"
+                        ],
+                        "sizeBytes": 114901591
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/gitjob@sha256:92641e7ecb34a2191e30ac48eef6e3a6e49fbf8c9bd70819aca327bbedbdaf97",
+                            "docker.io/rancher/gitjob:v0.1.76"
+                        ],
+                        "sizeBytes": 91013459
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/fleet@sha256:67e9c82e47400a844ecc6f996ad5e781dc533840192fb21247cc8ffcc44078ce",
+                            "docker.io/rancher/fleet:v0.8.0"
+                        ],
+                        "sizeBytes": 67344557
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/mirrored-coredns-coredns:1.10.1"
+                        ],
+                        "sizeBytes": 53618774
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/mirrored-cluster-api-controller@sha256:29a27c7939908895fdaa330fdaf06a02c5a9d23e7106e7cd64d529f01fbdc1a2",
+                            "docker.io/rancher/mirrored-cluster-api-controller:v1.4.4"
+                        ],
+                        "sizeBytes": 33556004
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/rancher-webhook@sha256:1c5d1e90a3b4a762cb8584d22b5170fec15b78a11649c4affce45e3f935c2b65",
+                            "docker.io/rancher/rancher-webhook:v0.3.6"
+                        ],
+                        "sizeBytes": 25389430
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/kubectl@sha256:962ac9d5ffef082196730eea8fcd1657b5d21feeec36e5d398a092154e1fa48f",
+                            "docker.io/rancher/kubectl:v1.20.2"
+                        ],
+                        "sizeBytes": 12025611
+                    },
+                    {
+                        "names": [
+                            "docker.io/rancher/mirrored-pause:3.6"
+                        ],
+                        "sizeBytes": 685866
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "ccm.1799c64252e9915b",
+                "namespace": "kube-system",
+                "uid": "4d036767-8c85-4e2d-990b-5e4c21d155b6",
+                "resourceVersion": "245",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "ccm",
+                "uid": "e8a535db-addf-41c2-85ec-115a3af33945",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "244"
+            },
+            "reason": "ApplyingManifest",
+            "message": "Applying manifest at \"/var/lib/rancher/k3s/server/manifests/ccm.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "ccm.1799c6425499af00",
+                "namespace": "kube-system",
+                "uid": "76dce056-94b3-48f6-a427-300183af55fc",
+                "resourceVersion": "250",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "ccm",
+                "uid": "e8a535db-addf-41c2-85ec-115a3af33945",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "244"
+            },
+            "reason": "AppliedManifest",
+            "message": "Applied manifest at \"/var/lib/rancher/k3s/server/manifests/ccm.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5-vtcrh.1799c64508168336",
+                "namespace": "kube-system",
+                "uid": "4f4a3e97-9609-461b-9a9d-127bb06c9bff",
+                "resourceVersion": "766",
+                "creationTimestamp": "2023-11-21T23:12:14Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-59b4f5bbd5-vtcrh",
+                "uid": "8664b0ec-54d2-420e-be02-eba908a4cdc9",
+                "apiVersion": "v1",
+                "resourceVersion": "761"
+            },
+            "reason": "Scheduled",
+            "message": "Successfully assigned kube-system/coredns-59b4f5bbd5-vtcrh to local-node",
+            "source": {},
+            "firstTimestamp": null,
+            "lastTimestamp": null,
+            "type": "Normal",
+            "eventTime": "2023-11-21T23:12:14.099801Z",
+            "action": "Binding",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-e371fd9da8ef"
+        },
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5-vtcrh.1799c6453024b499",
+                "namespace": "kube-system",
+                "uid": "bfb1d88a-ae4a-4add-bcfe-506b65fe466b",
+                "resourceVersion": "776",
+                "creationTimestamp": "2023-11-21T23:12:14Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-59b4f5bbd5-vtcrh",
+                "uid": "8664b0ec-54d2-420e-be02-eba908a4cdc9",
+                "apiVersion": "v1",
+                "resourceVersion": "764",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Pulled",
+            "message": "Container image \"rancher/mirrored-coredns-coredns:1.10.1\" already present on machine",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:14Z",
+            "lastTimestamp": "2023-11-21T23:12:14Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5-vtcrh.1799c6455877285d",
+                "namespace": "kube-system",
+                "uid": "74223851-8169-4012-b8dd-6dd7eae06788",
+                "resourceVersion": "783",
+                "creationTimestamp": "2023-11-21T23:12:15Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-59b4f5bbd5-vtcrh",
+                "uid": "8664b0ec-54d2-420e-be02-eba908a4cdc9",
+                "apiVersion": "v1",
+                "resourceVersion": "764",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Created",
+            "message": "Created container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:15Z",
+            "lastTimestamp": "2023-11-21T23:12:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5-vtcrh.1799c6455fa54091",
+                "namespace": "kube-system",
+                "uid": "39c433c6-3a78-4fba-a9c2-b742f24232db",
+                "resourceVersion": "785",
+                "creationTimestamp": "2023-11-21T23:12:15Z"
+            },
+            "involvedObject": {
+                "kind": "Pod",
+                "namespace": "kube-system",
+                "name": "coredns-59b4f5bbd5-vtcrh",
+                "uid": "8664b0ec-54d2-420e-be02-eba908a4cdc9",
+                "apiVersion": "v1",
+                "resourceVersion": "764",
+                "fieldPath": "spec.containers{coredns}"
+            },
+            "reason": "Started",
+            "message": "Started container coredns",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:15Z",
+            "lastTimestamp": "2023-11-21T23:12:15Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5.1799c6450362c8e4",
+                "namespace": "kube-system",
+                "uid": "7986ae58-c709-4808-9de1-3f72cc6919fc",
+                "resourceVersion": "763",
+                "creationTimestamp": "2023-11-21T23:12:14Z"
+            },
+            "involvedObject": {
+                "kind": "ReplicaSet",
+                "namespace": "kube-system",
+                "name": "coredns-59b4f5bbd5",
+                "uid": "70fb7bfe-cade-432f-bb28-961c8381604f",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "738"
+            },
+            "reason": "SuccessfulCreate",
+            "message": "Created pod: coredns-59b4f5bbd5-vtcrh",
+            "source": {
+                "component": "replicaset-controller"
+            },
+            "firstTimestamp": "2023-11-21T23:12:14Z",
+            "lastTimestamp": "2023-11-21T23:12:14Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns.1799c642552b1098",
+                "namespace": "kube-system",
+                "uid": "2abea23b-aa3c-430d-a3bf-d03df30b5153",
+                "resourceVersion": "253",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "coredns",
+                "uid": "de85dffd-e5d0-4c16-81ab-a32cf3f5eb23",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "252"
+            },
+            "reason": "ApplyingManifest",
+            "message": "Applying manifest at \"/var/lib/rancher/k3s/server/manifests/coredns.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns.1799c642591c5a76",
+                "namespace": "kube-system",
+                "uid": "3f64ff57-8bfb-439a-8925-e7533441a0db",
+                "resourceVersion": "261",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "coredns",
+                "uid": "de85dffd-e5d0-4c16-81ab-a32cf3f5eb23",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "252"
+            },
+            "reason": "AppliedManifest",
+            "message": "Applied manifest at \"/var/lib/rancher/k3s/server/manifests/coredns.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "coredns.1799c644d6db2eb1",
+                "namespace": "kube-system",
+                "uid": "366d38a9-0064-440b-8fdd-55dace706a31",
+                "resourceVersion": "739",
+                "creationTimestamp": "2023-11-21T23:12:13Z"
+            },
+            "involvedObject": {
+                "kind": "Deployment",
+                "namespace": "kube-system",
+                "name": "coredns",
+                "uid": "993a1031-ffc6-4ac8-ada0-6ee54ada5e3e",
+                "apiVersion": "apps/v1",
+                "resourceVersion": "258"
+            },
+            "reason": "ScalingReplicaSet",
+            "message": "Scaled up replica set coredns-59b4f5bbd5 to 1",
+            "source": {
+                "component": "deployment-controller"
+            },
+            "firstTimestamp": "2023-11-21T23:12:13Z",
+            "lastTimestamp": "2023-11-21T23:12:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "k3s-cloud-controller-manager.1799c6428b905ad1",
+                "namespace": "kube-system",
+                "uid": "1fa02ffe-d5f0-4f90-8994-3205f7634491",
+                "resourceVersion": "278",
+                "creationTimestamp": "2023-11-21T23:12:03Z"
+            },
+            "involvedObject": {
+                "kind": "Lease",
+                "namespace": "kube-system",
+                "name": "k3s-cloud-controller-manager",
+                "uid": "c49f83f5-20de-4c57-931b-fbaf852a66f6",
+                "apiVersion": "coordination.k8s.io/v1",
+                "resourceVersion": "277"
+            },
+            "reason": "LeaderElection",
+            "message": "e371fd9da8ef_a8b31845-382a-43c6-a0e8-ae7c2704ff93 became leader",
+            "source": {
+                "component": "cloud-controller-manager"
+            },
+            "firstTimestamp": "2023-11-21T23:12:03Z",
+            "lastTimestamp": "2023-11-21T23:12:03Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-controller-manager.1799c641e81ac091",
+                "namespace": "kube-system",
+                "uid": "420122e9-d980-4f71-b837-4ecd9ce6ad5e",
+                "resourceVersion": "218",
+                "creationTimestamp": "2023-11-21T23:12:00Z"
+            },
+            "involvedObject": {
+                "kind": "Lease",
+                "namespace": "kube-system",
+                "name": "kube-controller-manager",
+                "uid": "e7a50ad4-9862-4d9b-9408-cb03a36e649c",
+                "apiVersion": "coordination.k8s.io/v1",
+                "resourceVersion": "217"
+            },
+            "reason": "LeaderElection",
+            "message": "e371fd9da8ef_16e06b9b-4dc7-483c-9b3c-8d533f7919e8 became leader",
+            "source": {
+                "component": "kube-controller-manager"
+            },
+            "firstTimestamp": "2023-11-21T23:12:00Z",
+            "lastTimestamp": "2023-11-21T23:12:00Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "kube-scheduler.1799c6431ac9d9fb",
+                "namespace": "kube-system",
+                "uid": "531ffb6d-bec1-453d-ba3e-40a2addc9a49",
+                "resourceVersion": "406",
+                "creationTimestamp": "2023-11-21T23:12:05Z"
+            },
+            "involvedObject": {
+                "kind": "Lease",
+                "namespace": "kube-system",
+                "name": "kube-scheduler",
+                "uid": "3ce664f3-02ae-4078-86de-5aef8eea2831",
+                "apiVersion": "coordination.k8s.io/v1",
+                "resourceVersion": "405"
+            },
+            "reason": "LeaderElection",
+            "message": "e371fd9da8ef_b237dc1f-f087-4ec8-9f50-646e7659e890 became leader",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "firstTimestamp": "2023-11-21T23:12:05Z",
+            "lastTimestamp": "2023-11-21T23:12:05Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "rolebindings.1799c642597a0bdb",
+                "namespace": "kube-system",
+                "uid": "8771aff7-5f7b-42c7-93f6-e099768e02a5",
+                "resourceVersion": "264",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "rolebindings",
+                "uid": "327b3c33-6dbf-4ab0-b149-087cc608f8c0",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "263"
+            },
+            "reason": "ApplyingManifest",
+            "message": "Applying manifest at \"/var/lib/rancher/k3s/server/manifests/rolebindings.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "rolebindings.1799c6425b3ae8dc",
+                "namespace": "kube-system",
+                "uid": "3acb4d7f-f9b2-453e-93a6-ec0dde7adb4b",
+                "resourceVersion": "270",
+                "creationTimestamp": "2023-11-21T23:12:02Z"
+            },
+            "involvedObject": {
+                "kind": "Addon",
+                "namespace": "kube-system",
+                "name": "rolebindings",
+                "uid": "327b3c33-6dbf-4ab0-b149-087cc608f8c0",
+                "apiVersion": "k3s.cattle.io/v1",
+                "resourceVersion": "263"
+            },
+            "reason": "AppliedManifest",
+            "message": "Applied manifest at \"/var/lib/rancher/k3s/server/manifests/rolebindings.yaml\"",
+            "source": {
+                "component": "deploy",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:02Z",
+            "lastTimestamp": "2023-11-21T23:12:02Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kube-dns",
+                "namespace": "kube-system",
+                "uid": "c9db11b4-e611-4b0d-91e3-d47ca970e76f",
+                "resourceVersion": "260",
+                "creationTimestamp": "2023-11-21T23:12:02Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "CoreDNS",
+                    "objectset.rio.cattle.io/hash": "bce283298811743a0386ab510f2f67ef74240c57"
+                },
+                "annotations": {
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/4yRwY7TMBCGXwXN2Qlx026zljig3QtCQistcEEcHGdKTRKP5ZkWoSrvjtxmRWEV2Fui+fzpn39OYKP/jIk9BTBw1KCg96EDA4+Yjt4hKBhRbGfFgjmBDYHEiqfA+Zfa7+iEUcrkqXRWZMDS02ufDaAW5/QjYCq+HXsw0Nd8NTlq9eq9D92bt11H4b+KYEcEA44SdoFfhHO0Lr/pDy0W/JMFR1AQE40oezxwpiMlAQO3elM/m7FLNmaBpAPCpGCwLQ7nOvqGCxvjk/ySKH+mgILn1244sGAqeK531vyNzXvdUcL7D4//2GtveQ8GWoerpl7dNo3W23Vtq7q5se1GV7vV7maLu+16ta7cZpvzzu6riEu1TAo4osurzbnfPYABXZXruqxKXeVyKAmD+XJ68l6UlwY39bk9IUcDGPh0/wCTuiYLcXGJ/nj3Bz2iJO9+u/NxnvNfFTAO6ITSwkWmafoVAAD//yO4Hor3AgAA",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "coredns",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system",
+                    "prometheus.io/port": "9153",
+                    "prometheus.io/scrape": "true"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "dns",
+                        "protocol": "UDP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "dns-tcp",
+                        "protocol": "TCP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "metrics",
+                        "protocol": "TCP",
+                        "port": 9153,
+                        "targetPort": 9153
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "kube-dns"
+                },
+                "clusterIP": "10.43.0.10",
+                "clusterIPs": [
+                    "10.43.0.10"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns",
+                "namespace": "kube-system",
+                "uid": "993a1031-ffc6-4ac8-ada0-6ee54ada5e3e",
+                "resourceVersion": "793",
+                "generation": 1,
+                "creationTimestamp": "2023-11-21T23:12:02Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "kubernetes.io/name": "CoreDNS",
+                    "objectset.rio.cattle.io/hash": "bce283298811743a0386ab510f2f67ef74240c57"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/revision": "1",
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/6xVQW/bOBP9Kx/mLMVW0jaugO/QtbPboq3XqJNeCqOgqZHFNcXhkiMnRqD/vhjJduw2TdrFniyTb4ZvHucN70F58xlDNOQgB+V9HGwySGBtXAE5TNBb2tboGBKokVWhWEF+D8o5YsWGXJS/tPwLNUfks2DoTCtmi2eGBkaSQPLDfbp1GNLVZg05rC/i0c4mS/733rji/2+KgtyzKZyqEXLQFLBw8afg0SstMetmiWncRsYa2gSsWqLtilqPYqq830P6vPIZHDJGybY7dkwBJ9P5E8dWKlaQw1Lj+eji/PVolGWXLy7U8GL0Si1fZsPyvHx1ieXli/MXQ/3yUoh8V9ITpKNHLZQDbozc5VsTmcL2g6kNQz5MIKJFzRQEVCvW1YenymwlJQfFuNp2acla41Y3vlCMfYq7G6c2yli1tAh51ibAWy/MPp1gZR1rb/dxRy30pNDtUVGaHCvjMETIv9yDCiv5gFSTKyGBAbIe7FQayE2UxiIsEjC1WgmjoJyuMAxqE4LA0h14/5tnZ9nwTLq+i5g11s7IGr2FHN6VU+JZwNhbwJoNOoxxFmjZFVQqY5uA11XAWJEtIL9IoGL2fyDLvlcs9z6oUFmuIAFPgSEfDUdyKbrC7o7fXl/PRCrjDBtlJ2jVdo6aXBEhfzVMwGMwVByWMglutMYYj07OEmBTIzX8AHysj4RCL+VB2VnH6uXFAb1DBmLSZCGHm4kwfCYkZe1Pw67Hj4a9zo4Ca+RgdHwkcJFAQFWYfyW5RG4fFM9G2c8q/r3g57+gd8BITdDYtbYVB8a+9WsK0lLZ5fCjgQ74d4Ox39W+ka3hsO4G7Q7aI8UKqJtgeDsmx3jXlamspdtZMBtjcYVXUSvbzWPIS2UjJqCVV0tjDZueiioKsc306vrrb++mk6/zq0+f342vxClFIC97ylpYtL3ofzq7/UTEvxuLu0GTc2iwTWBDtqnxIzVu10e1fM52uh/ZEY66z5VmlfaR8HDCPuePcwx0E5nqo1Td//SZjAtpnsLFg5MnWKrGiokdFTg/moenI50i5GCNa+7kjnww1AlvVYzTnkCvRqptExlDqoNho5UFuaawMRrfaC3FTL81HpPFsH80v9zDGoXYeBffPXSxKyEB8oIUfnB1Z6RJRCMsS9QMOUxprissGiuV92mkqjSQxbPTesR5gWzqrXL4n2auldT/eMqFVOvJ0mo793I1Y3Lyoph9y3TTf/7Lr1Kt7uZrvO3NtzvgfcfylFtFkbt+SeC2QnfjomITS9M/VzChKfGhUGHb99FhLJZm9VF5IWIY65Pr2r8wyX7SHFZEyB40pQLfkihxQD0syXHfDOX2B0bZjc4HNqdx6cEb5KWtlD149CmztIu2bdt/AgAA//+BDg8J/AkAAA",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "coredns",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "kube-dns"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "k8s-app": "kube-dns"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "config-volume",
+                                "configMap": {
+                                    "name": "coredns",
+                                    "items": [
+                                        {
+                                            "key": "Corefile",
+                                            "path": "Corefile"
+                                        },
+                                        {
+                                            "key": "NodeHosts",
+                                            "path": "NodeHosts"
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            },
+                            {
+                                "name": "custom-config-volume",
+                                "configMap": {
+                                    "name": "coredns-custom",
+                                    "defaultMode": 420,
+                                    "optional": true
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "coredns",
+                                "image": "rancher/mirrored-coredns-coredns:1.10.1",
+                                "args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "dns",
+                                        "containerPort": 53,
+                                        "protocol": "UDP"
+                                    },
+                                    {
+                                        "name": "dns-tcp",
+                                        "containerPort": 53,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "name": "metrics",
+                                        "containerPort": 9153,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "limits": {
+                                        "memory": "170Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "70Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns"
+                                    },
+                                    {
+                                        "name": "custom-config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns/custom"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/ready",
+                                        "port": 8181,
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 2,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "drop": [
+                                            "all"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "Default",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "coredns",
+                        "serviceAccount": "coredns",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/control-plane",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical",
+                        "topologySpreadConstraints": [
+                            {
+                                "maxSkew": 1,
+                                "topologyKey": "kubernetes.io/hostname",
+                                "whenUnsatisfiable": "DoNotSchedule",
+                                "labelSelector": {
+                                    "matchLabels": {
+                                        "k8s-app": "kube-dns"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "strategy": {
+                    "type": "RollingUpdate",
+                    "rollingUpdate": {
+                        "maxUnavailable": 1,
+                        "maxSurge": "25%"
+                    }
+                },
+                "revisionHistoryLimit": 0,
+                "progressDeadlineSeconds": 600
+            },
+            "status": {
+                "observedGeneration": 1,
+                "replicas": 1,
+                "updatedReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "conditions": [
+                    {
+                        "type": "Available",
+                        "status": "True",
+                        "lastUpdateTime": "2023-11-21T23:12:13Z",
+                        "lastTransitionTime": "2023-11-21T23:12:13Z",
+                        "reason": "MinimumReplicasAvailable",
+                        "message": "Deployment has minimum availability."
+                    },
+                    {
+                        "type": "Progressing",
+                        "status": "True",
+                        "lastUpdateTime": "2023-11-21T23:12:15Z",
+                        "lastTransitionTime": "2023-11-21T23:12:13Z",
+                        "reason": "NewReplicaSetAvailable",
+                        "message": "ReplicaSet \"coredns-59b4f5bbd5\" has successfully progressed."
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5",
+                "namespace": "kube-system",
+                "uid": "70fb7bfe-cade-432f-bb28-961c8381604f",
+                "resourceVersion": "790",
+                "generation": 1,
+                "creationTimestamp": "2023-11-21T23:12:13Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "pod-template-hash": "59b4f5bbd5"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1",
+                    "objectset.rio.cattle.io/applied": "H4sIAAAAAAAA/6xVQW/bOBP9Kx/mLMVW0jaugO/QtbPboq3XqJNeCqOgqZHFNcXhkiMnRqD/vhjJduw2TdrFniyTb4ZvHucN70F58xlDNOQgB+V9HGwySGBtXAE5TNBb2tboGBKokVWhWEF+D8o5YsWGXJS/tPwLNUfks2DoTCtmi2eGBkaSQPLDfbp1GNLVZg05rC/i0c4mS/733rji/2+KgtyzKZyqEXLQFLBw8afg0SstMetmiWncRsYa2gSsWqLtilqPYqq830P6vPIZHDJGybY7dkwBJ9P5E8dWKlaQw1Lj+eji/PVolGWXLy7U8GL0Si1fZsPyvHx1ieXli/MXQ/3yUoh8V9ITpKNHLZQDbozc5VsTmcL2g6kNQz5MIKJFzRQEVCvW1YenymwlJQfFuNp2acla41Y3vlCMfYq7G6c2yli1tAh51ibAWy/MPp1gZR1rb/dxRy30pNDtUVGaHCvjMETIv9yDCiv5gFSTKyGBAbIe7FQayE2UxiIsEjC1WgmjoJyuMAxqE4LA0h14/5tnZ9nwTLq+i5g11s7IGr2FHN6VU+JZwNhbwJoNOoxxFmjZFVQqY5uA11XAWJEtIL9IoGL2fyDLvlcs9z6oUFmuIAFPgSEfDUdyKbrC7o7fXl/PRCrjDBtlJ2jVdo6aXBEhfzVMwGMwVByWMglutMYYj07OEmBTIzX8AHysj4RCL+VB2VnH6uXFAb1DBmLSZCGHm4kwfCYkZe1Pw67Hj4a9zo4Ca+RgdHwkcJFAQFWYfyW5RG4fFM9G2c8q/r3g57+gd8BITdDYtbYVB8a+9WsK0lLZ5fCjgQ74d4Ox39W+ka3hsO4G7Q7aI8UKqJtgeDsmx3jXlamspdtZMBtjcYVXUSvbzWPIS2UjJqCVV0tjDZueiioKsc306vrrb++mk6/zq0+f342vxClFIC97ylpYtL3ofzq7/UTEvxuLu0GTc2iwTWBDtqnxIzVu10e1fM52uh/ZEY66z5VmlfaR8HDCPuePcwx0E5nqo1Td//SZjAtpnsLFg5MnWKrGiokdFTg/moenI50i5GCNa+7kjnww1AlvVYzTnkCvRqptExlDqoNho5UFuaawMRrfaC3FTL81HpPFsH80v9zDGoXYeBffPXSxKyEB8oIUfnB1Z6RJRCMsS9QMOUxprissGiuV92mkqjSQxbPTesR5gWzqrXL4n2auldT/eMqFVOvJ0mo793I1Y3Lyoph9y3TTf/7Lr1Kt7uZrvO3NtzvgfcfylFtFkbt+SeC2QnfjomITS9M/VzChKfGhUGHb99FhLJZm9VF5IWIY65Pr2r8wyX7SHFZEyB40pQLfkihxQD0syXHfDOX2B0bZjc4HNqdx6cEb5KWtlD149CmztIu2bdt/AgAA//+BDg8J/AkAAA",
+                    "objectset.rio.cattle.io/id": "",
+                    "objectset.rio.cattle.io/owner-gvk": "k3s.cattle.io/v1, Kind=Addon",
+                    "objectset.rio.cattle.io/owner-name": "coredns",
+                    "objectset.rio.cattle.io/owner-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "coredns",
+                        "uid": "993a1031-ffc6-4ac8-ada0-6ee54ada5e3e",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "k8s-app": "kube-dns",
+                        "pod-template-hash": "59b4f5bbd5"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "k8s-app": "kube-dns",
+                            "pod-template-hash": "59b4f5bbd5"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "config-volume",
+                                "configMap": {
+                                    "name": "coredns",
+                                    "items": [
+                                        {
+                                            "key": "Corefile",
+                                            "path": "Corefile"
+                                        },
+                                        {
+                                            "key": "NodeHosts",
+                                            "path": "NodeHosts"
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            },
+                            {
+                                "name": "custom-config-volume",
+                                "configMap": {
+                                    "name": "coredns-custom",
+                                    "defaultMode": 420,
+                                    "optional": true
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "coredns",
+                                "image": "rancher/mirrored-coredns-coredns:1.10.1",
+                                "args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "dns",
+                                        "containerPort": 53,
+                                        "protocol": "UDP"
+                                    },
+                                    {
+                                        "name": "dns-tcp",
+                                        "containerPort": 53,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "name": "metrics",
+                                        "containerPort": 9153,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "limits": {
+                                        "memory": "170Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "70Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns"
+                                    },
+                                    {
+                                        "name": "custom-config-volume",
+                                        "readOnly": true,
+                                        "mountPath": "/etc/coredns/custom"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/ready",
+                                        "port": 8181,
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 2,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_BIND_SERVICE"
+                                        ],
+                                        "drop": [
+                                            "all"
+                                        ]
+                                    },
+                                    "readOnlyRootFilesystem": true,
+                                    "allowPrivilegeEscalation": false
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "Default",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "coredns",
+                        "serviceAccount": "coredns",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "key": "CriticalAddonsOnly",
+                                "operator": "Exists"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/control-plane",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            },
+                            {
+                                "key": "node-role.kubernetes.io/master",
+                                "operator": "Exists",
+                                "effect": "NoSchedule"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical",
+                        "topologySpreadConstraints": [
+                            {
+                                "maxSkew": 1,
+                                "topologyKey": "kubernetes.io/hostname",
+                                "whenUnsatisfiable": "DoNotSchedule",
+                                "labelSelector": {
+                                    "matchLabels": {
+                                        "k8s-app": "kube-dns"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "coredns-59b4f5bbd5-vtcrh",
+                "generateName": "coredns-59b4f5bbd5-",
+                "namespace": "kube-system",
+                "uid": "8664b0ec-54d2-420e-be02-eba908a4cdc9",
+                "resourceVersion": "789",
+                "creationTimestamp": "2023-11-21T23:12:14Z",
+                "labels": {
+                    "k8s-app": "kube-dns",
+                    "pod-template-hash": "59b4f5bbd5"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "coredns-59b4f5bbd5",
+                        "uid": "70fb7bfe-cade-432f-bb28-961c8381604f",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "config-volume",
+                        "configMap": {
+                            "name": "coredns",
+                            "items": [
+                                {
+                                    "key": "Corefile",
+                                    "path": "Corefile"
+                                },
+                                {
+                                    "key": "NodeHosts",
+                                    "path": "NodeHosts"
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "custom-config-volume",
+                        "configMap": {
+                            "name": "coredns-custom",
+                            "defaultMode": 420,
+                            "optional": true
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-r29cr",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "coredns",
+                        "image": "rancher/mirrored-coredns-coredns:1.10.1",
+                        "args": [
+                            "-conf",
+                            "/etc/coredns/Corefile"
+                        ],
+                        "ports": [
+                            {
+                                "name": "dns",
+                                "containerPort": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "name": "dns-tcp",
+                                "containerPort": 53,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "metrics",
+                                "containerPort": 9153,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "memory": "170Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "70Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "readOnly": true,
+                                "mountPath": "/etc/coredns"
+                            },
+                            {
+                                "name": "custom-config-volume",
+                                "readOnly": true,
+                                "mountPath": "/etc/coredns/custom"
+                            },
+                            {
+                                "name": "kube-api-access-r29cr",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 60,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 8181,
+                                "scheme": "HTTP"
+                            },
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_BIND_SERVICE"
+                                ],
+                                "drop": [
+                                    "all"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "allowPrivilegeEscalation": false
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "Default",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "coredns",
+                "serviceAccount": "coredns",
+                "nodeName": "local-node",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "CriticalAddonsOnly",
+                        "operator": "Exists"
+                    },
+                    {
+                        "key": "node-role.kubernetes.io/control-plane",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node-role.kubernetes.io/master",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority",
+                "topologySpreadConstraints": [
+                    {
+                        "maxSkew": 1,
+                        "topologyKey": "kubernetes.io/hostname",
+                        "whenUnsatisfiable": "DoNotSchedule",
+                        "labelSelector": {
+                            "matchLabels": {
+                                "k8s-app": "kube-dns"
+                            }
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2023-11-21T23:12:14Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2023-11-21T23:12:15Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2023-11-21T23:12:15Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2023-11-21T23:12:14Z"
+                    }
+                ],
+                "hostIP": "172.17.0.2",
+                "podIP": "10.42.0.2",
+                "podIPs": [
+                    {
+                        "ip": "10.42.0.2"
+                    }
+                ],
+                "startTime": "2023-11-21T23:12:14Z",
+                "containerStatuses": [
+                    {
+                        "name": "coredns",
+                        "state": {
+                            "running": {
+                                "startedAt": "2023-11-21T23:12:15Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "docker.io/rancher/mirrored-coredns-coredns:1.10.1",
+                        "imageID": "sha256:ead0a4a53df89fd173874b46093b6e62d8c72967bbf606d672c9e8c9b601a4fc",
+                        "containerID": "containerd://a1c2c008df359866c8da7663bc4abd2d59db56063b6034d11fbdf5ab28e2ea03",
+                        "started": true
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        }
+    ]
+}
+==== START logs for container coredns of pod kube-system/coredns-59b4f5bbd5-vtcrh ====
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+.:53
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[INFO] plugin/reload: Running configuration SHA512 = b941b080e5322f6519009bb49349462c7ddb6317425b0f6a83e5451175b720703949e3f3b454a24e77f3ffe57fd5e9c6130e528a5a1dd00d9000e4afd6c1108d
+CoreDNS-1.10.1
+linux/amd64, go1.20, 055b2c3
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+[WARNING] No files matching import glob pattern: /etc/coredns/custom/*.server
+==== END logs for container coredns of pod kube-system/coredns-59b4f5bbd5-vtcrh ====
+{
+    "kind": "EventList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "local-node.1799c641a2c934db",
+                "namespace": "default",
+                "uid": "28ef1665-59c8-47ff-bd7f-b6063952934b",
+                "resourceVersion": "195",
+                "creationTimestamp": "2023-11-21T23:11:59Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "Starting",
+            "message": "Starting kubelet.",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:11:59Z",
+            "lastTimestamp": "2023-11-21T23:11:59Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c641a3157cef",
+                "namespace": "default",
+                "uid": "d33d1ab0-b32e-45ea-a979-c969474c73bf",
+                "resourceVersion": "196",
+                "creationTimestamp": "2023-11-21T23:11:59Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "InvalidDiskCapacity",
+            "message": "invalid capacity 0 on image filesystem",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:11:59Z",
+            "lastTimestamp": "2023-11-21T23:11:59Z",
+            "count": 1,
+            "type": "Warning",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c642d000cef7",
+                "namespace": "default",
+                "uid": "2c9f59e6-143d-4446-a941-892fa3844438",
+                "resourceVersion": "299",
+                "creationTimestamp": "2023-11-21T23:12:04Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "NodeHasSufficientMemory",
+            "message": "Node local-node status is now: NodeHasSufficientMemory",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:04Z",
+            "lastTimestamp": "2023-11-21T23:12:04Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c642d00222dd",
+                "namespace": "default",
+                "uid": "5cd5097e-101b-4547-b18f-8421fe478f38",
+                "resourceVersion": "300",
+                "creationTimestamp": "2023-11-21T23:12:04Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "NodeHasNoDiskPressure",
+            "message": "Node local-node status is now: NodeHasNoDiskPressure",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:04Z",
+            "lastTimestamp": "2023-11-21T23:12:04Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c642d002a490",
+                "namespace": "default",
+                "uid": "57cd6b7c-27f8-41e9-9318-e2b6102f4e2c",
+                "resourceVersion": "301",
+                "creationTimestamp": "2023-11-21T23:12:04Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "NodeHasSufficientPID",
+            "message": "Node local-node status is now: NodeHasSufficientPID",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:04Z",
+            "lastTimestamp": "2023-11-21T23:12:04Z",
+            "count": 2,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c642d178eac4",
+                "namespace": "default",
+                "uid": "bbc94ec6-122b-41bf-bb8e-d328e7d54308",
+                "resourceVersion": "302",
+                "creationTimestamp": "2023-11-21T23:12:04Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "NodeAllocatableEnforced",
+            "message": "Updated Node Allocatable limit across pods",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:04Z",
+            "lastTimestamp": "2023-11-21T23:12:04Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c642e553ee4c",
+                "namespace": "default",
+                "uid": "bd81d578-fe31-4d4a-84ed-cf0839fabde6",
+                "resourceVersion": "348",
+                "creationTimestamp": "2023-11-21T23:12:04Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "75ca1a9c-4c8e-4e39-aa9c-902c91f21769",
+                "apiVersion": "v1",
+                "resourceVersion": "344"
+            },
+            "reason": "Synced",
+            "message": "Node synced successfully",
+            "source": {
+                "component": "cloud-node-controller"
+            },
+            "firstTimestamp": "2023-11-21T23:12:04Z",
+            "lastTimestamp": "2023-11-21T23:12:04Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c64311193876",
+                "namespace": "default",
+                "uid": "cf7a68db-5f0b-4400-8feb-23f0906f259b",
+                "resourceVersion": "397",
+                "creationTimestamp": "2023-11-21T23:12:05Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "NodeReady",
+            "message": "Node local-node status is now: NodeReady",
+            "source": {
+                "component": "kubelet",
+                "host": "local-node"
+            },
+            "firstTimestamp": "2023-11-21T23:12:05Z",
+            "lastTimestamp": "2023-11-21T23:12:05Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c643d05a66a2",
+                "namespace": "default",
+                "uid": "c4c6d6c0-e73f-4d2f-bea6-b776a35371cb",
+                "resourceVersion": "517",
+                "creationTimestamp": "2023-11-21T23:12:08Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "local-node"
+            },
+            "reason": "Starting",
+            "source": {},
+            "firstTimestamp": null,
+            "lastTimestamp": null,
+            "type": "Normal",
+            "eventTime": "2023-11-21T23:12:08.869766Z",
+            "action": "StartKubeProxy",
+            "reportingComponent": "kube-proxy",
+            "reportingInstance": "kube-proxy-e371fd9da8ef"
+        },
+        {
+            "metadata": {
+                "name": "local-node.1799c644d4e6dd58",
+                "namespace": "default",
+                "uid": "ec1772c1-46c3-4afa-a805-e1e93baf7c21",
+                "resourceVersion": "736",
+                "creationTimestamp": "2023-11-21T23:12:13Z"
+            },
+            "involvedObject": {
+                "kind": "Node",
+                "name": "local-node",
+                "uid": "75ca1a9c-4c8e-4e39-aa9c-902c91f21769",
+                "apiVersion": "v1"
+            },
+            "reason": "RegisteredNode",
+            "message": "Node local-node event: Registered Node local-node in Controller",
+            "source": {
+                "component": "node-controller"
+            },
+            "firstTimestamp": "2023-11-21T23:12:13Z",
+            "lastTimestamp": "2023-11-21T23:12:13Z",
+            "count": 1,
+            "type": "Normal",
+            "eventTime": null,
+            "reportingComponent": "",
+            "reportingInstance": ""
+        }
+    ]
+}
+{
+    "kind": "ReplicationControllerList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "kubernetes",
+                "namespace": "default",
+                "uid": "1c4d0477-e75f-4703-a9e6-7205d5a67ae1",
+                "resourceVersion": "191",
+                "creationTimestamp": "2023-11-21T23:11:59Z",
+                "labels": {
+                    "component": "apiserver",
+                    "provider": "kubernetes"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 6443
+                    }
+                ],
+                "clusterIP": "10.43.0.1",
+                "clusterIPs": [
+                    "10.43.0.1"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}
+{
+    "kind": "DaemonSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "DeploymentList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "21079"
+    },
+    "items": []
+}
