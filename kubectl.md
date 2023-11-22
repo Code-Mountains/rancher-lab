@@ -46,5 +46,13 @@ kubectl version
 # Cluster Info
 ```
 kubectl cluster-info
+
+
+$ kubectl cluster-info 
+Kubernetes control plane is running at https://localhost/k8s/clusters/local
+CoreDNS is running at https://localhost/k8s/clusters/local/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
 ```
 
