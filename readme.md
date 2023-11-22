@@ -65,6 +65,15 @@ English
 
 ```
 
+# Run Rancher with Helm
+```
+helm upgrade --install rancher rancher/rancher --namespace cattle-system --create-namespace \
+--set hostname=rancher.$INGRESS_HOST.nip.io \
+--set bootstrapPassword=admin \
+--set ingress.tls.source=letsEncrypt
+```
+
+
 # Deploy a NodeJS App on Kubernetes and Rancher
 ```
 https://www.suse.com/c/rancher_blog/deploy-a-nodejs-app-on-kubernetes-and-rancher/
