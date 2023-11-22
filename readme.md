@@ -70,7 +70,9 @@ English
 helm upgrade --install rancher rancher/rancher --namespace cattle-system --create-namespace \
 --set hostname=rancher.$INGRESS_HOST.nip.io \
 --set bootstrapPassword=admin \
---set ingress.tls.source=letsEncrypt
+--set ingress.tls.source=letsEncrypt \
+--set letsEncrypt.email=$LE_EMAIL \
+--wait
 ```
 
 
