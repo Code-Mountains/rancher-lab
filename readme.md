@@ -76,6 +76,13 @@ helm upgrade --install rancher rancher/rancher --namespace cattle-system --creat
 ```
 
 
+# Reset Rancher Password from Docker:
+```
+$ docker exec -it e371fd9d reset-password
+New password for default admin user (user-2wfsq):
+zocauNX2jbT3s7eawRkE
+```
+
 # Deploy a NodeJS App on Kubernetes and Rancher
 ```
 https://www.suse.com/c/rancher_blog/deploy-a-nodejs-app-on-kubernetes-and-rancher/
