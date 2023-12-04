@@ -97,3 +97,20 @@ https://www.suse.com/c/rancher_blog/building-a-nodejs-application-using-mongodb-
 ```
 https://www.rancher.cn/nodejs-mongodb-application-with-rancher-part-2
 ```
+
+# Installing Helm:
+```
+curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
+sudo apt-get install apt-transport-https --yes
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
+
+
+$ helm version
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/sysadmin/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/sysadmin/.kube/config
+version.BuildInfo{Version:"v3.13.2", GitCommit:"2a2fb3b98829f1e0be6fb18af2f6599e0f4e8243", GitTreeState:"clean", GoVersion:"go1.20.10"}
+
+
+```
