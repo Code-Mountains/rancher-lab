@@ -111,6 +111,69 @@ $ helm version
 WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/sysadmin/.kube/config
 WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/sysadmin/.kube/config
 version.BuildInfo{Version:"v3.13.2", GitCommit:"2a2fb3b98829f1e0be6fb18af2f6599e0f4e8243", GitTreeState:"clean", GoVersion:"go1.20.10"}
+```
+
+
+# Install K3s on Linux: 
+```
+$ curl -sfL https://get.k3s.io | sh -s - server --cluster-init
+[INFO]  Finding release for channel stable
+[INFO]  Using v1.27.7+k3s2 as release
+[INFO]  Downloading hash https://github.com/k3s-io/k3s/releases/download/v1.27.7+k3s2/sha256sum-amd64.txt
+[INFO]  Downloading binary https://github.com/k3s-io/k3s/releases/download/v1.27.7+k3s2/k3s
+[INFO]  Verifying binary download
+[INFO]  Installing k3s to /usr/local/bin/k3s
+[INFO]  Skipping installation of SELinux RPM
+[INFO]  Skipping /usr/local/bin/kubectl symlink to k3s, command exists in PATH at /usr/bin/kubectl
+[INFO]  Creating /usr/local/bin/crictl symlink to k3s
+[INFO]  Skipping /usr/local/bin/ctr symlink to k3s, command exists in PATH at /usr/bin/ctr
+[INFO]  Creating killall script /usr/local/bin/k3s-killall.sh
+[INFO]  Creating uninstall script /usr/local/bin/k3s-uninstall.sh
+[INFO]  env: Creating environment file /etc/systemd/system/k3s.service.env
+[INFO]  systemd: Creating service file /etc/systemd/system/k3s.service
+[INFO]  systemd: Enabling k3s unit
+Created symlink /etc/systemd/system/multi-user.target.wants/k3s.service → /etc/systemd/system/k3s.service.
+[INFO]  systemd: Starting k3s
+
+
+$ sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+$ sudo chown -R sysdamin:sysadmin ~/.kube/
+$ sudo chown -R sysadmin:sysadmin ~/.kube/
+
+$ kubectl get all -A
+NAMESPACE     NAME                                         READY   STATUS      RESTARTS   AGE
+kube-system   pod/coredns-77ccd57875-pz6f6                 1/1     Running     0          106s
+kube-system   pod/helm-install-traefik-crd-ggktb           0/1     Completed   0          106s
+kube-system   pod/helm-install-traefik-qfktc               0/1     Completed   1          106s
+kube-system   pod/local-path-provisioner-957fdf8bc-5hcdk   1/1     Running     0          106s
+kube-system   pod/metrics-server-648b5df564-s2t9h          1/1     Running     0          106s
+kube-system   pod/svclb-traefik-c38b53c0-c5tpw             2/2     Running     0          90s
+kube-system   pod/traefik-768bdcdcdd-68cqt                 1/1     Running     0          90s
+
+NAMESPACE     NAME                     TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                      AGE
+default       service/kubernetes       ClusterIP      10.43.0.1      <none>         443/TCP                      2m2s
+kube-system   service/kube-dns         ClusterIP      10.43.0.10     <none>         53/UDP,53/TCP,9153/TCP       118s
+kube-system   service/metrics-server   ClusterIP      10.43.62.39    <none>         443/TCP                      117s
+kube-system   service/traefik          LoadBalancer   10.43.25.123   192.168.0.20   80:31545/TCP,443:31759/TCP   90s
+
+NAMESPACE     NAME                                    DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+kube-system   daemonset.apps/svclb-traefik-c38b53c0   1         1         1       1            1           <none>          90s
+
+NAMESPACE     NAME                                     READY   UP-TO-DATE   AVAILABLE   AGE
+kube-system   deployment.apps/coredns                  1/1     1            1           118s
+kube-system   deployment.apps/local-path-provisioner   1/1     1            1           118s
+kube-system   deployment.apps/metrics-server           1/1     1            1           117s
+kube-system   deployment.apps/traefik                  1/1     1            1           90s
+
+NAMESPACE     NAME                                               DESIRED   CURRENT   READY   AGE
+kube-system   replicaset.apps/coredns-77ccd57875                 1         1         1       106s
+kube-system   replicaset.apps/local-path-provisioner-957fdf8bc   1         1         1       106s
+kube-system   replicaset.apps/metrics-server-648b5df564          1         1         1       106s
+kube-system   replicaset.apps/traefik-768bdcdcdd                 1         1         1       90s
+
+NAMESPACE     NAME                                 COMPLETIONS   DURATION   AGE
+kube-system   job.batch/helm-install-traefik       1/1           18s        116s
+kube-system   job.batch/helm-install-traefik-crd   1/1           16s        116s
 
 
 ```
